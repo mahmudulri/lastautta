@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "648860309681",
+    "project_id": "aust-textile-alumni",
+    "storage_bucket": "aust-textile-alumni.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:648860309681:android:3448b08837ea74233cea90",
+        "android_client_info": {
+          "package_name": "com.pakizatvl.austtaa.aust_textile_alumni"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "648860309681-sh7k0baentor89r5287bej5p8t7khqup.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDG35ihRqcLDId6FFLxYQBWMR67Wl4jLgc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "648860309681-sh7k0baentor89r5287bej5p8t7khqup.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
