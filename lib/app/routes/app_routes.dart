@@ -21,6 +21,7 @@ abstract class Routes {
   static const SETFORGETPASS = _Paths.SETFORGETPASS;
   static const USER_PROFILE = _Paths.USER_PROFILE;
   static const NOTIFICATION_VIEW = _Paths.NOTIFICATION_VIEW;
+  static const UPLOAD_VIDEO = _Paths.UPLOAD_VIDEO;
 }
 
 abstract class _Paths {
@@ -41,4 +42,5 @@ abstract class _Paths {
   static const SETFORGETPASS = '/setforgetpass';
   static const USER_PROFILE = '/user-profile';
   static const NOTIFICATION_VIEW = '/notification-view';
+  static const UPLOAD_VIDEO = '/upload-video';
 }

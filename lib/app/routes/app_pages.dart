@@ -1,3 +1,4 @@
+import 'package:aust_textile_alumni/app/modules/upload_video/views/upload_video.dart';
 import 'package:get/get.dart';
 
 import '../modules/alumni_book/bindings/alumni_book_binding.dart';
@@ -38,7 +39,7 @@ part 'app_routes.dart';
 class AppPages {
   AppPages._();
 
-  static const INITIAL = Routes.SPLASH_SCREEN;
+  static const INITIAL = Routes.VIDEO_STREAM;
 
   static final routes = [
     GetPage(
@@ -120,6 +121,10 @@ class AppPages {
       name: _Paths.NOTIFICATION_VIEW,
       page: () => NotificationView(),
       binding: NotificationViewBinding(),
+    ),
+    GetPage(
+      name: _Paths.UPLOAD_VIDEO,
+      page: () => UploadVideo(),
     ),
   ];
 }
