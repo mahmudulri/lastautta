@@ -14,7 +14,6 @@ class HomeAlumniBook extends StatefulWidget {
 }
 
 class _HomeAlumniBookState extends State<HomeAlumniBook> {
-
   var location = [
     'Dhaka',
     'Barishal',
@@ -81,7 +80,7 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
             centerTitle: true,
             backgroundColor: Color(0xffE5E5E5),
             leading: GestureDetector(
-              onTap: (){
+              onTap: () {
                 Get.back();
               },
               child: Icon(
@@ -144,7 +143,7 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                       children: [
                         Padding(
                             padding:
-                            EdgeInsets.only(left: screenHeight * 0.015),
+                                EdgeInsets.only(left: screenHeight * 0.015),
                             child: Icon(
                               Icons.search,
                               size: screenHeight * 0.035,
@@ -180,7 +179,7 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                       backgroundColor: Color(0xff00602B),
                                       shape: RoundedRectangleBorder(
                                           borderRadius:
-                                          BorderRadius.circular(10.0)),
+                                              BorderRadius.circular(10.0)),
                                       title: Padding(
                                         padding: EdgeInsets.only(
                                             left: screenHeight * 0.015),
@@ -200,7 +199,7 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                               child: Padding(
                                                 padding: EdgeInsets.only(
                                                     bottom:
-                                                    screenHeight * 0.022),
+                                                        screenHeight * 0.022),
                                                 child: GestureDetector(
                                                   onTap: () {
                                                     Navigator.pop(context);
@@ -214,7 +213,9 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                         ),
                                       ),
                                       content: StatefulBuilder(
-                                        builder: (BuildContext context, void Function(void Function()) setState) {
+                                        builder: (BuildContext context,
+                                            void Function(void Function())
+                                                setState) {
                                           return Container(
                                             height: screenHeight,
                                             width: screenWidth,
@@ -228,105 +229,56 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                                   // width: double.infinity,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                    BorderRadius.circular(10.0),
+                                                        BorderRadius.circular(
+                                                            10.0),
                                                     color: Colors.white,
                                                   ),
                                                   child: Padding(
                                                       padding: EdgeInsets.only(
-                                                          left:
-                                                          screenHeight * 0.019,
-                                                          right:
-                                                          screenHeight * 0.019),
-                                                      child:
-                                                      Obx(
-                                                            () =>
-                                                            DropdownButton<String>(
-                                                              hint: Text(
-                                                                "Location",
-                                                                style: TextStyle(
-                                                                    color: Colors.grey),
-                                                              ),
-                                                              value: selectLocation,
-                                                              icon: Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    top: screenHeight *
-                                                                        0.010),
-                                                                child: Image.asset(
-                                                                    'assets/images/arrow_down.png'),
-                                                              ),
-                                                              iconSize: 20,
-                                                              isExpanded: true,
-                                                              underline: SizedBox(),
-                                                              items: location
-                                                                  .map((quantityValue) {
-                                                                return DropdownMenuItem(
-                                                                    value:
-                                                                    quantityValue,
-                                                                    child: Text(
-                                                                        quantityValue.toString()));
-                                                              }).toList(),
-                                                              onChanged: (val){
-                                                                setState(() {
-                                                                  this.selectLocation = val;
-                                                                  print("locaaaaaaaaaaaaaa"+selectLocation.toString());
-                                                                });
-                                                              },
-                                                            ),
-                                                      )
-                                                  ),
-                                                ),
-                                                SizedBox(
-                                                  height: screenHeight * 0.010,
-                                                ),
-                                                Container(
-                                                  height: screenHeight * 0.070,
-                                                  // width: double.infinity,
-                                                  decoration: BoxDecoration(
-                                                    borderRadius:
-                                                    BorderRadius.circular(10.0),
-                                                    color: Colors.white,
-                                                  ),
-                                                  child: Padding(
-                                                      padding: EdgeInsets.only(
-                                                          left:
-                                                          screenHeight * 0.019,
-                                                          right:
-                                                          screenHeight * 0.019),
+                                                          left: screenHeight *
+                                                              0.019,
+                                                          right: screenHeight *
+                                                              0.019),
                                                       child: Obx(
-                                                            () =>
-                                                            DropdownButton<String>(
-                                                              hint: Text(
-                                                                "Company Name",
-                                                                style: TextStyle(
-                                                                    color: Colors.grey),
-                                                              ),
-                                                              value: this.selectcompanyName,
-                                                              icon: Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    top: screenHeight *
+                                                        () => DropdownButton<
+                                                            String>(
+                                                          hint: Text(
+                                                            "Location",
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey),
+                                                          ),
+                                                          value: selectLocation,
+                                                          icon: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                top:
+                                                                    screenHeight *
                                                                         0.010),
-                                                                child: Image.asset(
-                                                                    'assets/images/arrow_down.png'),
-                                                              ),
-                                                              iconSize: 20,
-                                                              isExpanded: true,
-                                                              underline: SizedBox(),
-                                                              onChanged: (chosenValue) {
-                                                                setState(() {
-                                                                  selectcompanyName =
-                                                                      chosenValue
-                                                                          .toString();
-                                                                });
-                                                              },
-                                                              items: companyName
-                                                                  .map((quantityValue) {
-                                                                return DropdownMenuItem(
-                                                                    value:
+                                                            child: Image.asset(
+                                                                'assets/images/arrow_down.png'),
+                                                          ),
+                                                          iconSize: 20,
+                                                          isExpanded: true,
+                                                          underline: SizedBox(),
+                                                          items: location.map(
+                                                              (quantityValue) {
+                                                            return DropdownMenuItem(
+                                                                value:
                                                                     quantityValue,
-                                                                    child: Text(
-                                                                        quantityValue));
-                                                              }).toList(),
-                                                            ),
+                                                                child: Text(
+                                                                    quantityValue
+                                                                        .toString()));
+                                                          }).toList(),
+                                                          onChanged: (val) {
+                                                            setState(() {
+                                                              this.selectLocation =
+                                                                  val;
+                                                              print("locaaaaaaaaaaaaaa" +
+                                                                  selectLocation
+                                                                      .toString());
+                                                            });
+                                                          },
+                                                        ),
                                                       )),
                                                 ),
                                                 SizedBox(
@@ -337,50 +289,55 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                                   // width: double.infinity,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                    BorderRadius.circular(10.0),
+                                                        BorderRadius.circular(
+                                                            10.0),
                                                     color: Colors.white,
                                                   ),
                                                   child: Padding(
                                                       padding: EdgeInsets.only(
-                                                          left:
-                                                          screenHeight * 0.019,
-                                                          right:
-                                                          screenHeight * 0.019),
+                                                          left: screenHeight *
+                                                              0.019,
+                                                          right: screenHeight *
+                                                              0.019),
                                                       child: Obx(
-                                                            () =>
-                                                            DropdownButton<String>(
-                                                              hint: Text(
-                                                                "Department",
-                                                                style: TextStyle(
-                                                                    color: Colors.grey),
-                                                              ),
-                                                              value: this.selectDepartmentName,
-                                                              icon: Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    top: screenHeight *
+                                                        () => DropdownButton<
+                                                            String>(
+                                                          hint: Text(
+                                                            "Company Name",
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey),
+                                                          ),
+                                                          value: this
+                                                              .selectcompanyName,
+                                                          icon: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                top:
+                                                                    screenHeight *
                                                                         0.010),
-                                                                child: Image.asset(
-                                                                    'assets/images/arrow_down.png'),
-                                                              ),
-                                                              iconSize: 20,
-                                                              isExpanded: true,
-                                                              underline: SizedBox(),
-                                                              onChanged: (chosenValue) {
-                                                                setState(() {
-                                                                  selectDepartmentName =
-                                                                      chosenValue
-                                                                          .toString();
-                                                                });
-                                                              },
-                                                              items: department
-                                                                  .map((quantityValue) {
-                                                                return DropdownMenuItem(
-                                                                    value:
+                                                            child: Image.asset(
+                                                                'assets/images/arrow_down.png'),
+                                                          ),
+                                                          iconSize: 20,
+                                                          isExpanded: true,
+                                                          underline: SizedBox(),
+                                                          onChanged:
+                                                              (chosenValue) {
+                                                            setState(() {
+                                                              selectcompanyName =
+                                                                  chosenValue
+                                                                      .toString();
+                                                            });
+                                                          },
+                                                          items: companyName.map(
+                                                              (quantityValue) {
+                                                            return DropdownMenuItem(
+                                                                value:
                                                                     quantityValue,
-                                                                    child: Text(
-                                                                        quantityValue));
-                                                              }).toList(),
-                                                            ),
+                                                                child: Text(
+                                                                    quantityValue));
+                                                          }).toList(),
+                                                        ),
                                                       )),
                                                 ),
                                                 SizedBox(
@@ -391,73 +348,141 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                                   // width: double.infinity,
                                                   decoration: BoxDecoration(
                                                     borderRadius:
-                                                    BorderRadius.circular(10.0),
+                                                        BorderRadius.circular(
+                                                            10.0),
                                                     color: Colors.white,
                                                   ),
                                                   child: Padding(
                                                       padding: EdgeInsets.only(
-                                                          left:
-                                                          screenHeight * 0.019,
-                                                          right:
-                                                          screenHeight * 0.019),
+                                                          left: screenHeight *
+                                                              0.019,
+                                                          right: screenHeight *
+                                                              0.019),
                                                       child: Obx(
-                                                            () =>
-                                                            DropdownButton<String>(
-                                                              hint: Text(
-                                                                "Batch No",
-                                                                style: TextStyle(
-                                                                    color: Colors.grey),
-                                                              ),
-                                                              value: this.selectBatchName,
-                                                              icon: Padding(
-                                                                padding: EdgeInsets.only(
-                                                                    top: screenHeight *
+                                                        () => DropdownButton<
+                                                            String>(
+                                                          hint: Text(
+                                                            "Department",
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey),
+                                                          ),
+                                                          value: this
+                                                              .selectDepartmentName,
+                                                          icon: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                top:
+                                                                    screenHeight *
                                                                         0.010),
-                                                                child: Image.asset(
-                                                                    'assets/images/arrow_down.png'),
-                                                              ),
-                                                              iconSize: 20,
-                                                              isExpanded: true,
-                                                              underline: SizedBox(),
-                                                              onChanged: (chosenValue) {
-                                                                setState(() {
-                                                                  selectBatchName =
-                                                                      chosenValue
-                                                                          .toString();
-                                                                });
-                                                              },
-                                                              items: batch
-                                                                  .map((quantityValue) {
-                                                                return DropdownMenuItem(
-                                                                    value:
+                                                            child: Image.asset(
+                                                                'assets/images/arrow_down.png'),
+                                                          ),
+                                                          iconSize: 20,
+                                                          isExpanded: true,
+                                                          underline: SizedBox(),
+                                                          onChanged:
+                                                              (chosenValue) {
+                                                            setState(() {
+                                                              selectDepartmentName =
+                                                                  chosenValue
+                                                                      .toString();
+                                                            });
+                                                          },
+                                                          items: department.map(
+                                                              (quantityValue) {
+                                                            return DropdownMenuItem(
+                                                                value:
                                                                     quantityValue,
-                                                                    child: Text(
-                                                                        quantityValue));
-                                                              }).toList(),
-                                                            ),
+                                                                child: Text(
+                                                                    quantityValue));
+                                                          }).toList(),
+                                                        ),
+                                                      )),
+                                                ),
+                                                SizedBox(
+                                                  height: screenHeight * 0.010,
+                                                ),
+                                                Container(
+                                                  height: screenHeight * 0.070,
+                                                  // width: double.infinity,
+                                                  decoration: BoxDecoration(
+                                                    borderRadius:
+                                                        BorderRadius.circular(
+                                                            10.0),
+                                                    color: Colors.white,
+                                                  ),
+                                                  child: Padding(
+                                                      padding: EdgeInsets.only(
+                                                          left: screenHeight *
+                                                              0.019,
+                                                          right: screenHeight *
+                                                              0.019),
+                                                      child: Obx(
+                                                        () => DropdownButton<
+                                                            String>(
+                                                          hint: Text(
+                                                            "Batch No",
+                                                            style: TextStyle(
+                                                                color: Colors
+                                                                    .grey),
+                                                          ),
+                                                          value: this
+                                                              .selectBatchName,
+                                                          icon: Padding(
+                                                            padding: EdgeInsets.only(
+                                                                top:
+                                                                    screenHeight *
+                                                                        0.010),
+                                                            child: Image.asset(
+                                                                'assets/images/arrow_down.png'),
+                                                          ),
+                                                          iconSize: 20,
+                                                          isExpanded: true,
+                                                          underline: SizedBox(),
+                                                          onChanged:
+                                                              (chosenValue) {
+                                                            setState(() {
+                                                              selectBatchName =
+                                                                  chosenValue
+                                                                      .toString();
+                                                            });
+                                                          },
+                                                          items: batch.map(
+                                                              (quantityValue) {
+                                                            return DropdownMenuItem(
+                                                                value:
+                                                                    quantityValue,
+                                                                child: Text(
+                                                                    quantityValue));
+                                                          }).toList(),
+                                                        ),
                                                       )),
                                                 ),
                                                 Spacer(),
                                                 Align(
-                                                  alignment: Alignment.bottomCenter,
+                                                  alignment:
+                                                      Alignment.bottomCenter,
                                                   child: ElevatedButton(
                                                     style: ButtonStyle(
                                                         backgroundColor:
-                                                        MaterialStateProperty
-                                                            .all(Colors.white),
+                                                            MaterialStateProperty
+                                                                .all(Colors
+                                                                    .white),
                                                         shape: MaterialStateProperty
                                                             .all(
-                                                            RoundedRectangleBorder(
-                                                              borderRadius:
-                                                              BorderRadius.circular(
-                                                                  08.0),
-                                                            ))),
+                                                                RoundedRectangleBorder(
+                                                          borderRadius:
+                                                              BorderRadius
+                                                                  .circular(
+                                                                      08.0),
+                                                        ))),
                                                     onPressed: () {},
                                                     child: Center(
                                                       child: Text(
                                                         "Filter",
                                                         style: TextStyle(
-                                                            color: Colors.green),
+                                                            color:
+                                                                Colors.green),
                                                       ),
                                                     ),
                                                   ),
@@ -466,7 +491,6 @@ class _HomeAlumniBookState extends State<HomeAlumniBook> {
                                             ),
                                           );
                                         },
-
                                       ),
                                     );
                                   });
